@@ -1,6 +1,6 @@
 {
   "name": "etymo-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NodeJS and browser util for fetching etymology results from https://www.etymonline.com",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
