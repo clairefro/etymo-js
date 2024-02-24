@@ -1,4 +1,4 @@
-# Etymo
+# etymo-js
 
 A NodeJS and browser wrapper for fetching etymology information in various languages from Douglas Harper's wonderful Online Etymology Dictionary (https://www.etymonline.com)
 
