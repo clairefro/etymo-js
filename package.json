@@ -19,16 +19,16 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/clairefro/etymo-js"
   },
   "files": [
     "lib/**/*"
   ],
   "keywords": [
-    "typescript",
-    "npm",
-    "template",
-    "ts"
+    "node",
+    "browser",
+    "etymology",
+    "words"
   ],
   "author": "Claire Froelich",
   "license": "MIT",
