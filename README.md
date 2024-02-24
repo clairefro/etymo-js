@@ -15,6 +15,7 @@ npm install etymo-js
 ```
 
 ```js
+import { Etymo } from "etymo-js";
 // initialize
 const etymo = new Etymo();
 
