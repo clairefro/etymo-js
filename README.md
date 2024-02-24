@@ -114,8 +114,8 @@ const res = await etymo.get("/word/remember#etymonline_v_10402");
 ```json
 {
   "term": "remember (v.)",
-  "def": "mid-14c., remembren, \"keep or bear (something or someone) in mind, retain in the memory, preserve unforgotten,\" from Old French remembrer \"remember, recall, bring to mind\" (11c.), from Latin rememorari \"recall to mind, remember,\" from re- \"again\" (see re-) + memorari \"be mindful of, [...]",
-  "path": "/jp/word/remember#etymonline_v_10402",
+  "def": "mid-14c., remembren, \"keep or bear (something or someone) in mind, retain in the memory, preserve unforgotten,\" from Old French remembrer \"remember, recall, bring to mind\" (11c.)[...]",
+  "path": "/word/remember#etymonline_v_10402",
   "id": "10402"
 }
 ```
@@ -135,7 +135,7 @@ const res = await etymo.get("/word/remember#etymonline_v_10402", {
 {
   "term": "remember (v.)",
   "def": "14世紀中頃、remembren は、「（何かや誰かを）心に留める、記憶に保つ、忘れないようにする」という意味で使われました。これは、古フランス語の remembrer「思い出す、思い起こす」（11世紀）から来ており、ラテン語の rememorari「思い出す、記憶する」から派生したものです。これは、re-「再び」（re- を参照） [...]",
-  "path": "/word/remember#etymonline_v_10402",
+  "path": "/jp/word/remember#etymonline_v_10402",
   "id": "10402"
 }
 ```
