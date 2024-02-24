@@ -1,7 +1,9 @@
 import { LANGUAGES } from "../constants";
 
 function getIdFromPath(path: string): string {
-  return path.match(/\d+$/)?.[0]! as unknown as string;
+  // TS doesn't believe me than this match wil be un-null...
+  // eslint-disable-next-line
+  return path.match(/\d+$/)?.[0]!;
 }
 
 /** type guard */
