@@ -106,7 +106,7 @@ Returns a single entry (`{ term, def, path, id}`)
 **get English definition**
 
 ```js
-const res = await etymo.search("/word/remember#etymonline_v_10402");
+const res = await etymo.get("/word/remember#etymonline_v_10402");
 ```
 
 ```json
@@ -124,7 +124,7 @@ You can specify an option `lang` parameter . See avaialable languages below. Not
 
 ```js
 // get definition in Japanese
-const res = await etymo.search("/word/remember#etymonline_v_10402", {
+const res = await etymo.get("/word/remember#etymonline_v_10402", {
   lang: "jp",
 });
 ```
