@@ -99,9 +99,9 @@ const res = await etymo.search("back seat");
 ]
 ```
 
-### .get() entry by path
+### .get()
 
-You can use any of the paths returned from search to get single entries. You can also specifify the language of the definition returned.
+Gets an entry by its path. You can also specifify the language of the definition returned.
 
 Returns a single entry (`{ term, def, path, id}`)
 
