@@ -4,8 +4,6 @@ import { getIdFromPath, isLanguage } from "./lib/util";
 import { BASE_URL } from "./constants";
 
 class Etymo {
-  constructor() {}
-
   async search(term: string): Promise<Entry[]> {
     const url = this._buildSearchUrl(term);
     const html = await getHtml(url);
@@ -44,11 +42,11 @@ class Etymo {
   }
 
   _buildSearchUrl(term: string): string {
-    let baseUrl = `${BASE_URL}/search`;
+    const baseUrl = `${BASE_URL}/search`;
 
     const urlEncodedTerm = encodeURIComponent(term);
 
-    let url = `${baseUrl}?q=${urlEncodedTerm}`;
+    const url = `${baseUrl}?q=${urlEncodedTerm}`;
 
     return url;
   }

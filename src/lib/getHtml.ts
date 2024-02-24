@@ -14,12 +14,8 @@ async function get(
   url: string,
   headers: { [key: string]: string } = {}
 ): Promise<string | JsonObject> {
-  try {
-    const response: AxiosResponse<string> = await axios.get(url, { headers });
+  const response: AxiosResponse<string> = await axios.get(url, { headers });
 
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
+  return response.data;
 }
 export { getHtml, getJson };

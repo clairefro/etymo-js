@@ -23,7 +23,7 @@ function getEntriesFromSearch(html: string): Entry[] {
 
 function getEntryWithoutPathId(
   html: string,
-  isNotEnglish: boolean = false
+  isNotEnglish = false
 ): EntryWithoutPathId {
   const $ = cheerio.load(html);
   if (isNotEnglish) {

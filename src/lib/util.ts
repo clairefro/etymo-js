@@ -1,7 +1,7 @@
 import { LANGUAGES } from "../constants";
 
 function getIdFromPath(path: string): string {
-  return path.match(/\d+$/)?.[0]!;
+  return path.match(/\d+$/)?.[0]! as unknown as string;
 }
 
 /** type guard */
