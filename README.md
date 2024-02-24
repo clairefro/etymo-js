@@ -115,7 +115,7 @@ const res = await etymo.get("/word/remember#etymonline_v_10402");
 {
   "term": "remember (v.)",
   "def": "mid-14c., remembren, \"keep or bear (something or someone) in mind, retain in the memory, preserve unforgotten,\" from Old French remembrer \"remember, recall, bring to mind\" (11c.), from Latin rememorari \"recall to mind, remember,\" from re- \"again\" (see re-) + memorari \"be mindful of, [...]",
-  "path": "/word/remember#etymonline_v_10402",
+  "path": "/jp/word/remember#etymonline_v_10402",
   "id": "10402"
 }
 ```
