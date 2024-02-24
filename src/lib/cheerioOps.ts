@@ -27,7 +27,7 @@ function getEntryWithoutPathId(
 ): EntryWithoutPathId {
   const $ = cheerio.load(html);
   if (isNotEnglish) {
-    const term = $('[class^="prose-lg"] span').text();
+    const term = $('[class^="prose-lg"] span').first().text();
     const def = $('[class^="prose-lg"] section').text();
     const entryWithoutPathId = { term, def } as unknown as EntryWithoutPathId;
     return entryWithoutPathId;
