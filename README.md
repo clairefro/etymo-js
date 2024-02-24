@@ -1,6 +1,6 @@
 # Etymo
 
-A Nodejs wrapper for fetching etymology information in various langauges from Douglas Harper's wonderful Online Etymology Dictionary (https://www.etymonline.com)
+A NodeJS and browser wrapper for fetching etymology information in various langauges from Douglas Harper's wonderful Online Etymology Dictionary (https://www.etymonline.com)
 
 Please refer to Online Etymology Dictionary's [Terms of Service](https://www.etymonline.com/legal/terms) to make sure you are not infringing intellectual property rights with your use case, and please be kind to their servers.
 
@@ -27,7 +27,7 @@ async function run() {
 run();
 ```
 
-Returns an array of search results, with most relevant at position `0`:
+Returns an array of search results, with the first item being most relevant:
 
 ```json
 [
@@ -61,7 +61,7 @@ Note - requires internet connection to retrieve data.
 
 **Basic search**
 
-Returns array of search result obejcts (`{ term, def, path, id}`), ordered by relevance
+Returns array of search result obejcts (`{ term, def, path, id}`), ordered by relevance to search term
 
 ```js
 const res = await etymo.search("remember");
@@ -78,7 +78,7 @@ const res = await etymo.search("remember");
 ]
 ```
 
-**Multi word search**
+**Multi-word search**
 
 It's fine to use spaces in the search term
 
