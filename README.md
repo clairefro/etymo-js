@@ -162,7 +162,7 @@ const res = await etymo.trending();
 
 ## Development
 
-Created with [@el3um4s/typescript-npm-package-starter](https://www.npmjs.com/package/@el3um4s/typescript-npm-package-starter)
+Package created with [@el3um4s/typescript-npm-package-starter](https://www.npmjs.com/package/@el3um4s/typescript-npm-package-starter)
 
 Ignore the TS errors in the test file 🤷 Jest doesn't seem to care.
 
