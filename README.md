@@ -1,10 +1,12 @@
 # Etymo
 
-A NodeJS and browser wrapper for fetching etymology information in various langauges from Douglas Harper's wonderful Online Etymology Dictionary (https://www.etymonline.com)
+A NodeJS and browser wrapper for fetching etymology information in various languages from Douglas Harper's wonderful Online Etymology Dictionary (https://www.etymonline.com)
 
 Please refer to Online Etymology Dictionary's [Terms of Service](https://www.etymonline.com/legal/terms) to make sure you are not infringing intellectual property rights with your use case, and please be kind to their servers.
 
 <a href="https://www.buymeacoffee.com/clairefro"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a potato&emoji=🍠&slug=clairefro&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
+
+Consider donating [directly to Douglas Harper](https://www.patreon.com/etymonline?utm_source=etymonline.com&utm_campaign=footer_link&utm_medium=website) for maintaining an excellent word resource.
 
 ## Get started
 
