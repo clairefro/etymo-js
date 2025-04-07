@@ -2,6 +2,7 @@ import { getEntriesFromSearch, getEntryWithoutPathId } from "./lib/cheerioOps";
 import { getHtml, getJson } from "./lib/getHtml";
 import { getIdFromPath, isLanguage } from "./lib/util";
 import { BASE_URL } from "./constants";
+import { Entry, Language } from "./types";
 
 class Etymo {
   async search(term: string): Promise<Entry[]> {

@@ -1,23 +1,34 @@
 import * as cheerio from "cheerio";
 import { getIdFromPath } from "./util";
+import { Entry, EntryWithoutPathId } from "../types";
+import { getHtml } from "./getHtml";
 
-function getEntriesFromSearch(html: string): Entry[] {
+const BASE_URL = "https://www.etymonline.com";
+
+async function getEntriesFromSearch(html: string): Promise<Entry[]> {
   const $ = cheerio.load(html);
-  const entries: any[] = [];
 
-  const entriesNodes = $('[class^="word--"]');
+  // Get all links and convert to array of promises to resolve linked terms
+  const entryPromises = $('a[href^="/word/"]')
+    .map(async (_i, el) => {
+      const $el = $(el);
+      const term = $el.find("span").first().text();
+      const path = $el.attr("href") as string;
 
-  entriesNodes.each((_i, el) => {
-    const term = $(el).find('[class^="word__name--"]').text();
-    const def = $(el).find('[class^="word__defination--"]').text();
+      // Fetch HTML for this term
+      const termHtml = await getHtml(BASE_URL + path);
+      const $term = cheerio.load(termHtml);
 
-    const path = el.attribs.href;
+      const def = $term("section > p").text();
 
-    const id = getIdFromPath(path);
-    const entry = { term, def, path, id } as unknown as Entry;
-    entries.push(entry);
-  });
+      const id = getIdFromPath(path);
+      return { term, def, path, id } as Entry;
+    })
+    .get(); // Convert Cheerio object to array
 
+  // Wait for all promises to resolve
+  const entries = await Promise.all(entryPromises);
+  console.log({ entries });
   return entries;
 }
 

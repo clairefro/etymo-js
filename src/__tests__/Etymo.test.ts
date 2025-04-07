@@ -1,4 +1,5 @@
 import { Etymo } from "../index";
+import { Entry, Language } from "../types";
 
 const etymo = new Etymo();
 
@@ -33,6 +34,8 @@ describe("Etymo.search()", () => {
   test("should return results for a valid single-word search term", async () => {
     const res = (await etymo.search(VALID_SEARCH_TERM_SINGLE)) as Entry[];
 
+    console.log({ res });
+
     expect(Array.isArray(res)).toBe(true);
     expect(res.every(isEntry)).toBe(true);
 
@@ -41,7 +44,7 @@ describe("Etymo.search()", () => {
 
   test("should return results for a valid multi-word search term", async () => {
     const res = (await etymo.search(VALID_SEARCH_TERM_MULTI)) as Entry[];
-
+    console.log({ res });
     expect(Array.isArray(res)).toBe(true);
     expect(res.every(isEntry)).toBe(true);
 
@@ -50,7 +53,7 @@ describe("Etymo.search()", () => {
 
   test("should return an empty array for search term with no results", async () => {
     const res = (await etymo.search(INVALID_SEARCH_TERM)) as Entry[];
-
+    console.log({ res });
     expect(Array.isArray(res)).toBe(true);
     expect(res).toHaveLength(0);
 
@@ -129,10 +132,9 @@ describe("Etymo.get()", () => {
 
   test("should throw error for an invalid language", async () => {
     try {
-      await etymo.get(VALID_PATH, { lang: INVALID_LANG as Language });
+      await etymo.get(VALID_PATH, { lang: INVALID_LANG as any });
       fail("Expected function to throw an error but it did not.");
     } catch (error) {
-      console.log(error);
       expect(error).toBeDefined();
     }
 

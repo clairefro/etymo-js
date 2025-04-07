@@ -7,7 +7,7 @@ function getIdFromPath(path: string): string {
 }
 
 /** type guard */
-function isLanguage(value: any): value is Language {
+function isLanguage(value: any): boolean {
   return Object.keys(LANGUAGES).includes(value) ? true : false;
 }
 

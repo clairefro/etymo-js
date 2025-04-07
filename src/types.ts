@@ -1,21 +1,20 @@
-declare enum Language {
-  cn = "cn",
-  de = "de",
-  en = "en",
-  es = "es",
-  fr = "fr",
-  it = "it",
-  jp = "jp",
-  kr = "kr",
-  pt = "pt",
-}
+export type Language =
+  | "cn"
+  | "de"
+  | "en"
+  | "es"
+  | "fr"
+  | "it"
+  | "jp"
+  | "kr"
+  | "pt";
 
-interface EntryWithoutPathId {
-  name: string;
+export interface EntryWithoutPathId {
+  term: string;
   def: string;
 }
 
-declare interface Entry extends EntryWithoutPathId {
+export interface Entry extends EntryWithoutPathId {
   path: string;
   id: string;
 }

@@ -1,6 +1,6 @@
 const BASE_URL = "https://www.etymonline.com";
 
-const LANGUAGES: { [key in Language]: string } = {
+const LANGUAGES: { [key: string]: string } = {
   cn: "cn",
   de: "de",
   en: "en",
